@@ -1,1 +1,71 @@
-$ cat > /app/memory/PRD.md << 'ENDPRD' # StyleVee E-commerce - PRD ## Original Problem Statement Build a website for Harshil Clothing (Brand: StyleVee, www.stylevee.in) - 4-5 page e-commerce for premium menswear (formal trousers, chinos, straight fit, gurkha, bellbottom trousers, white cotton shirts). Address: JAWALA NAGAR, NEW DELHI - 110032. Founder: Harsh Chhokra. Payment via Cashfree. ## Architecture - **Backend**: FastAPI + MongoDB (Motor async driver) - **Frontend**: React + TailwindCSS + Shadcn UI - **Auth**: JWT + bcrypt password hashing - **Payment**: Cashfree (MOCKED - ready for integration) ## User Personas 1. **Customer** - Browse, search, register, login, add to cart/wishlist, checkout, track orders, write reviews 2. **Admin** - Manage products (CRUD), manage orders, view analytics, moderate reviews ## What's Been Implemented (April 2026) ### Iteration 1 - MVP - Full backend API (auth, products, cart, wishlist, addresses, orders, admin stats) - All frontend pages (Home, Shop, ProductDetail, Login, Register, Cart, Checkout, Account, Wishlist, OrderSuccess, AdminDashboard, About, Contact) - Premium editorial design with Playfair Display + Outfit fonts - 6 seed products across all categories - Admin seeded: admin@stylevee.in / admin123 ### Iteration 2 - Reviews & Search - Product reviews/ratings system (1-5 stars, comments, average rating) - Search functionality (name + description + category, live dropdown in header + shop page search bar) ## Prioritized Backlog ### P0 (Critical) - DONE - [x] Product catalog with categories - [x] User authentication - [x] Shopping cart & checkout - [x] Admin dashboard - [x] Product reviews/ratings - [x] Search functionality ### P1 (Important) - Pending - [ ] Cashfree payment integration (needs API keys from user) - [ ] Product image upload (user to provide images) - [ ] Order email notifications (user chose to skip for now) ### P2 (Nice to Have) - [ ] Coupon/discount codes - [ ] Inventory management alerts - [ ] SEO optimization - [ ] Social media sharing / WhatsApp share button ## Next Tasks 1. Integrate Cashfree payment when API keys available 2. Add user's product images when uploaded 3. Add coupon/discount system 4. WhatsApp share on product pages ENDPRD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleVee</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f5f5f5;
+      text-align:center;
+    }
+
+    header{
+      background:black;
+      color:white;
+      padding:20px;
+    }
+
+    h1{
+      margin:0;
+      font-size:48px;
+    }
+
+    .hero{
+      padding:100px 20px;
+    }
+
+    .hero h2{
+      font-size:40px;
+      color:#222;
+    }
+
+    .hero p{
+      font-size:20px;
+      color:#555;
+    }
+
+    button{
+      padding:15px 30px;
+      background:black;
+      color:white;
+      border:none;
+      font-size:18px;
+      cursor:pointer;
+      border-radius:5px;
+    }
+
+    button:hover{
+      background:#444;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>StyleVee</h1>
+</header>
+
+<section class="hero">
+  <h2>Premium Menswear</h2>
+  <p>Formal trousers, chinos, shirts & luxury fashion.</p>
+
+  <button>Shop Now</button>
+</section>
+
+</body>
+</html>
